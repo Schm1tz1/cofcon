@@ -45,6 +45,7 @@ void updateTempSensor() {
     if(sensors.requestTemperaturesByIndex(DALLAS_IDX)) {
       float curT = sensors.getTempCByIndex(DALLAS_IDX);
       
+      // very simple selection of noise hits/invalid values
       if(abs(curT-lastT)<1.0 || lastT<1) {
         SumT+=curT;
         CntT++;        

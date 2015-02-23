@@ -36,6 +36,7 @@ void updateTempSensor() {
     if(TSens1.getTemperture(&raw_temp)) {
       float curT = TSens1.calc_Celsius(&raw_temp);
 
+	  // very simple selection of noise hits/invalid values 
       if(abs(curT-lastT)<1.0 || lastT<1) {
         SumT+=curT;
         CntT++;        

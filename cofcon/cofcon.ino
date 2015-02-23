@@ -5,17 +5,26 @@
 // Uses PID and PID-Autotune library
 //
 
-// Simulation mode deactivates physical sensors and heater output 
-#define SIMULATION_MODE
+//
+// COFCON configuration part
 //
 
-// Select standard serial interface type
-//#define SERIAL_BBCC
+// Simulation mode deactivates physical sensors and heater output 
+//#define SIMULATION_MODE
+//
+
+// Select serial interface type (Standard-CC/BBCC-Compatible/Bluetooth-Module)
 #define SERIAL_CC
+//#define SERIAL_BBCC
+//#define SERIAL_BT
 
 // defines to select sensor types or interface parameters
 #define SENS_TSIC
 //#define SENS_DALLAS
+
+//
+// End of COFCON configuration part
+//
 
 #include <PID_v1.h>
 
@@ -26,7 +35,7 @@ double gInputTemp=0.0;
 double gOutputPwr;
 double gP, gI, gD;
 
-double aggKp=35.0, aggKi=0.0, aggKd=0.0;
+double aggKp=100.0, aggKi=0.0, aggKd=0.0;
 unsigned int gSampleTime=200;
 
 double aTuneStep=100.0, aTuneNoise=0.2;
