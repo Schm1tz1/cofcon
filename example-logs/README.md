@@ -7,6 +7,7 @@ The "standard" cofcon-format of the plotter output is used, only the first line 
 A file normally starts like this:
 
 Gaggia-CC TSIC 0.1
+
 64951 23.20 99.50 50.00 0.00 0.00 1000.00
 ...
 
