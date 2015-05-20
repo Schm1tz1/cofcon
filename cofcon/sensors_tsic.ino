@@ -33,7 +33,7 @@ void setupSensor() {
 
 void updateTempSensor() {
   if (abs(millis() - lastSensTime) >= TSIC_SMP_TIME) {
-    if(TSens1.getTemperture(&raw_temp)) {
+    if(TSens1.getTemperature(&raw_temp)) {
       float curT = TSens1.calc_Celsius(&raw_temp);
 
 	  // very simple selection of noise hits/invalid values 
