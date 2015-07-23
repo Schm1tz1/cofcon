@@ -5,6 +5,7 @@
 // Serial Interface for Configuration, PID tuning and Data Logging
 //
 
+#ifndef SERIAL_BT
 #ifdef SERIAL_CC
 
 #define SERIAL_PLOT_INTERVAL 200
@@ -264,6 +265,7 @@ void serialEvent() {
   }
 }
 
+#endif
 #endif
 // END Serial Interface
 

@@ -5,6 +5,7 @@
 // Serial Interface for Configuration, PID tuning and Data Logging
 //
 
+#ifndef SERIAL_BT
 #ifdef SERIAL_BBCC
 
 #define AUTO_PRINT_INTERVAL 200  // milliseconds
@@ -257,5 +258,6 @@ void printFloat(float value, int places) {
   }
 }
 
+#endif
 #endif
 // END Serial Interface

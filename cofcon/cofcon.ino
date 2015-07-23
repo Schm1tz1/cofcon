@@ -10,13 +10,13 @@
 //
 
 // Simulation mode deactivates physical sensors and heater output 
-//#define SIMULATION_MODE
+#define SIMULATION_MODE
 //
 
 // Select serial interface type (Standard-CC/BBCC-Compatible/Bluetooth-Module)
-#define SERIAL_CC
+//#define SERIAL_CC
 //#define SERIAL_BBCC
-//#define SERIAL_BT
+#define SERIAL_BT
 
 // defines to select sensor types or interface parameters
 #define SENS_TSIC
