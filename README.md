@@ -6,7 +6,7 @@ Cofcon is a simple PID-based controller for espresso and coffee machines. It onl
 This is not another copy-and-paste-PID, instead the [Arduino-PID-Library][2] by br3ttb are used as these controller seems to work very stable with standard-parameters and allows auto-tuning to achieve a very high temperature stability (about 0.1°C in the case of my Gaggia CC).
 The basic idea of the heater control and parts of the code are based on [BBCC by Tim Hirzel][3] which can be found on Arduino Playground, the serial interface code and graphing output should be compatible.
 The code is designed in a (more or less) modular way so new modules or even a simple simulation for testing purposes can be selected using preprocessor defines in the main file.
-It is possible to control the board vie bluetooth using a HC-xx-modue for your Arduino. A simple control-app has been designed using the [MIT AppInventor2][4], but it is still in development stage. Also see README-File in the arduino-directory.
+It is possible to control the board vie bluetooth using a HC-xx-modue for your Arduino. A simple control-app has been designed using the [MIT AppInventor2][4], but it is still in development stage. For details on tha app see README-File in the android-directory.
 
 [4]: http://ai2.appinventor.mit.edu
 
