@@ -10,8 +10,7 @@
 #define SERIAL_BAUD 9600
 #define SERIAL_PLOT_INTERVAL 200
 
-#define BT_MOD_PWR_PIN 10
-#define BT_MOD_RST_PIN 11
+#define BT_MOD_PWR_PIN 9
 
 String inStr = "";
 boolean newlineFlag = false;
@@ -47,14 +46,8 @@ void updateSerialInterface() {
     else if(inStr.startsWith("tune")) {
       serialTuningMode(inStr);
     }
-    else if(inStr=="FLASH") {
+    else if(inStr=="BTOFF") {
         digitalWrite(BT_MOD_PWR_PIN, LOW);
-        pinMode(BT_MOD_RST_PIN, OUTPUT);
-        digitalWrite(BT_MOD_RST_PIN, LOW);
-    }
-    else if(inStr=="RST") {
-        pinMode(BT_MOD_RST_PIN, OUTPUT);
-        digitalWrite(BT_MOD_RST_PIN, LOW);
     }
     
     inStr="";
@@ -151,14 +144,14 @@ void serialPrintStatus() {
 }
 
 void resetParameters() {
-  gP=30.0; 
-  gI=0.55; 
-  gD=500.0;
-  gTargetTemp=100.0; 
-  gOvershoot=1.5;
-  aggKp=35.0; 
-  aggKi=0.0; 
-  aggKd=0.0;
+  gP=S_P; 
+  gI=S_I; 
+  gD=S_D;
+  gTargetTemp=S_TSET; 
+  gOvershoot=S_TBAND;
+  aggKp=S_aP; 
+  aggKi=S_aI; 
+  aggKd=S_aD;
 }
 
 // helper command to get float from string

@@ -14,8 +14,8 @@
 #define SIM_T_HEAT 0.7787
 
 float heaterSavedState = 0.0;
-float curTemp;
-unsigned long lastSensTime;
+float curTemp = 0.0;
+unsigned long lastSensTime = 0;
 
 void setupSensor() {
   curTemp = SIM_T_START;

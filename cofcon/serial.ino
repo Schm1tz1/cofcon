@@ -234,14 +234,14 @@ void serialPrintStatus() {
 
 void resetParameters() {
   Serial.println("Parameter reset performed !");
-  gP=30.0; 
-  gI=0.55; 
-  gD=500.0;
-  gTargetTemp=100.0; 
-  gOvershoot=1.5;
-  aggKp=35.0; 
-  aggKi=0.0; 
-  aggKd=0.0;
+  gP=S_P; 
+  gI=S_I; 
+  gD=S_D;
+  gTargetTemp=S_TSET; 
+  gOvershoot=S_TBAND;
+  aggKp=S_aP; 
+  aggKi=S_aI; 
+  aggKd=S_aD;
 }
 
 // helper command to get float from string

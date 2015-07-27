@@ -9,6 +9,16 @@
 // COFCON configuration part
 //
 
+// STANDARD reset values based on Gaggia CC
+#define S_P 115.0
+#define S_I 4.0
+#define S_D 850.0
+#define S_aP 100.0
+#define S_aI 0.0
+#define S_aD 0.0
+#define S_TSET 94.0
+#define S_TBAND 1.5
+
 // Simulation mode deactivates physical sensors and heater output 
 #define SIMULATION_MODE
 //
@@ -29,10 +39,10 @@
 #include <PID_v1.h>
 
 // global variables
-double gTargetTemp;
-double gOvershoot;
+double gTargetTemp=0.0;
+double gOvershoot=0.5;
 double gInputTemp=0.0;
-double gOutputPwr;
+double gOutputPwr=0.0;
 double gP, gI, gD;
 
 double aggKp=100.0, aggKi=0.0, aggKd=0.0;

@@ -12,8 +12,8 @@
 #include <TSIC.h>
 
 // pins for power and signal
-#define TSIC_VCC 12
-#define TSIC_SIG 13
+#define TSIC_VCC 2
+#define TSIC_SIG 3
 #define TSIC_SMP_TIME 100
 
 #define ACCURACY 0.1
@@ -36,7 +36,7 @@ void updateTempSensor() {
     if(TSens1.getTemperature(&raw_temp)) {
       float curT = TSens1.calc_Celsius(&raw_temp);
 
-	  // very simple selection of noise hits/invalid values 
+      // very simple selection of noise hits/invalid values 
       if(abs(curT-lastT)<1.0 || lastT<1) {
         SumT+=curT;
         CntT++;        
