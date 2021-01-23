@@ -48,6 +48,7 @@ void updateTempSensor() {
       // very simple selection of noise hits/invalid values
       if(abs(curT-lastT)<1.0 || lastT<1) {
         SumT+=curT;
+        lastT=curT;
         CntT++;        
       }     
       lastSensTime=millis();
